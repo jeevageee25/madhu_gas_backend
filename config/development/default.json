@@ -1,0 +1,17 @@
+﻿{
+  "app": {
+    "port": 9104,
+    "userRefreshInterval": 900000,
+    "gcInterval": 3600000
+  },
+  "Database": {
+    "DFARM": {
+      "connectString": "mongodb+srv://jeevageee25:student0Z@cluster0.d1izp.mongodb.net",
+      "dbName": "madhu"
+    },
+    "DataLake": {
+      "connectString": "mongodb+srv://jeevageee25:student0Z@cluster0.d1izp.mongodb.net",
+      "dbName": "madhu"
+    }
+  }
+}

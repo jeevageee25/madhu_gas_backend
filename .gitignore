@@ -1,0 +1,6 @@
+node_modules/
+wallet/
+walletDfarm/
+launch.json
+package-lock.json
+node_modules
