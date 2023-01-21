@@ -33,11 +33,19 @@ router.delete('/products/delete/:_id', validator(schemas.delete, 'params'),
 
 // ORDERS 
 
-router.post('/order/search', validator(schemas.searchOrders, 'body'),
+router.post('/orders/search', validator(schemas.searchOrders, 'body'),
     controller.searchOrders
 );
 
 router.post('/order/create', validator(schemas.createOrders, 'body'),
     controller.createOrders
+);
+
+router.post('/order/update', validator(schemas.updateOrders, 'body'),
+    controller.updateOrders
+);
+
+router.delete('/order/delete/:_id', validator(schemas.delete, 'params'),
+    controller.deleteOrders
 );
 module.exports = router;

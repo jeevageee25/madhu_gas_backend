@@ -40,7 +40,20 @@ const schemas = {
     phone: Joi.number().optional(),
     pincode: Joi.string().optional(),
     product: Joi.string().optional(),
-  })
+  }),
+  updateOrders: Joi.object({
+    _id: Joi.string().required(),
+    address1: Joi.string().optional(),
+    address2: Joi.string().optional(),
+    category: Joi.string().optional(),
+    count: Joi.number().optional(),
+    expected_delivery: Joi.string().optional(),
+    first_name: Joi.string().optional(),
+    last_name: Joi.string().optional(),
+    phone: Joi.number().optional(),
+    pincode: Joi.string().optional(),
+    product: Joi.string().optional(),
+  }),
 }
 
 module.exports = schemas;

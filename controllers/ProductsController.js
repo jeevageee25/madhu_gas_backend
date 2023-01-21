@@ -87,6 +87,24 @@ class ProductsController {
     }
   }
 
+  async updateOrders(req, res) {
+    try {
+      const pService = await service.updateOrders(req);
+      return appUtils.successResponse(res, pService, constants.MESSAGES.success);
+    } catch (error) {
+      return appUtils.errorResponse(res, error, constants.code.error_code);
+    }
+  }
+
+  async deleteOrders(req, res) {
+    try {
+      const pService = await service.deleteOrders(req);
+      return appUtils.successResponse(res, pService, constants.MESSAGES.success);
+    } catch (error) {
+      return appUtils.errorResponse(res, error, constants.code.error_code);
+    }
+  }
+
 }
 
 module.exports = { ProductsController };

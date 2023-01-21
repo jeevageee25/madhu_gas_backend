@@ -58,6 +58,23 @@ class ProductsService {
     );
   }
 
+  async updateOrders(req) {
+    return await this.serviceUtil.update(
+      req.body,
+      constants.COLLECTIONS.ORDERS,
+      constants.MESSAGES.success,
+      req
+    );
+  }
+
+  async deleteOrders(req) {
+    return await this.serviceUtil.delete(
+      req.params,
+      constants.COLLECTIONS.ORDERS,
+      constants.MESSAGES.success
+    );
+  }
+
 }
 
 module.exports = { ProductsService };
