@@ -7,7 +7,13 @@ const schemas = require('../schemas').Products;
 const controller = new ProductsController();
 
 
-//PRODUCTS 
+// EXECUTIVE SEARCH 
+
+router.post('/executive/search', validator(schemas.searchExecutive, 'body'),
+    controller.searchExecutive
+);
+
+// PRODUCTS 
 
 router.post('/products/search', validator(schemas.searchProducts, 'body'),
     controller.searchProducts

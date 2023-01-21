@@ -11,6 +11,10 @@ class ProductsService {
     this.serviceUtil = new ServiceUtil();
   }
  
+  async searchExecutive(req) {
+    return await this.serviceUtil.search(req.body, constants.COLLECTIONS.EXECUTIVE);
+  }
+
   async searchProducts(req) {
     return await this.serviceUtil.search(req.body, constants.COLLECTIONS.PRODUCTS);
   }

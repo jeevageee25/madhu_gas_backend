@@ -3,6 +3,11 @@ const schemas = {
   delete: Joi.object({
     _id: Joi.string().required(),
   }),
+  searchExecutive: Joi.object().keys({
+    search_key: Joi.object().required(),
+    page: Joi.number().optional(),
+    perPage: Joi.number().optional(),
+  }),
   searchProducts: Joi.object().keys({
     search_key: Joi.object().required(),
     page: Joi.number().optional(),

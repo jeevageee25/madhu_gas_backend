@@ -11,6 +11,20 @@ class ProductsController {
    * @param {*} req
    * @param {*} res
    */
+
+  async searchExecutive(req, res) {
+    try {
+      const pService = await service.searchExecutive(req);
+      return appUtils.successResponse(
+        res,
+        pService,
+        constants.MESSAGES.success
+      );
+    } catch (error) {
+      return appUtils.errorResponse(res, error, constants.code.error_code);
+    }
+  }
+  
   async searchProducts(req, res) {
     try {
       const pService = await service.searchProducts(req);
