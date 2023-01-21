@@ -24,6 +24,23 @@ const schemas = {
     price: Joi.number().optional(),
     category: Joi.string().optional(),
   }),
-};
+  searchOrders: Joi.object().keys({
+    search_key: Joi.object().required(),
+    page: Joi.number().optional(),
+    perPage: Joi.number().optional(),
+  }),
+  createOrders: Joi.object({
+    address1: Joi.string().optional(),
+    address2: Joi.string().optional(),
+    category: Joi.string().optional(),
+    count: Joi.number().optional(),
+    expected_delivery: Joi.string().optional(),
+    first_name: Joi.string().optional(),
+    last_name: Joi.string().optional(),
+    phone: Joi.number().optional(),
+    pincode: Joi.string().optional(),
+    product: Joi.string().optional(),
+  })
+}
 
 module.exports = schemas;

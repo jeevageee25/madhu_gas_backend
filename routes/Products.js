@@ -30,4 +30,14 @@ router.post('/products/update', validator(schemas.updateProducts, 'body'),
 router.delete('/products/delete/:_id', validator(schemas.delete, 'params'),
     controller.deleteProducts
 );
+
+// ORDERS 
+
+router.post('/order/search', validator(schemas.searchOrders, 'body'),
+    controller.searchOrders
+);
+
+router.post('/order/create', validator(schemas.createOrders, 'body'),
+    controller.createOrders
+);
 module.exports = router;

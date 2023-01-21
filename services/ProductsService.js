@@ -45,6 +45,19 @@ class ProductsService {
     );
   }
 
+  async searchOrders(req) {
+    return await this.serviceUtil.search(req.body, constants.COLLECTIONS.ORDERS);
+  }
+
+  async createOrders(req) {
+    return await this.serviceUtil.add(
+      req.body,
+      constants.COLLECTIONS.ORDERS,
+      constants.MESSAGES.success,
+      req
+    );
+  }
+
 }
 
 module.exports = { ProductsService };

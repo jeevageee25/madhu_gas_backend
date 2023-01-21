@@ -2,6 +2,7 @@ module.exports = {
   COLLECTIONS: {
     PRODUCTS: 'products',
     EXECUTIVE:'employees',
+    ORDERS:"orders"
   },
   MESSAGES: {
     success: "success",

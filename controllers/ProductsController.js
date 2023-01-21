@@ -64,6 +64,29 @@ class ProductsController {
       return appUtils.errorResponse(res, error, constants.code.error_code);
     }
   }
+
+  async searchOrders(req, res) {
+    try {
+      const pService = await service.searchOrders(req);
+      return appUtils.successResponse(
+        res,
+        pService,
+        constants.MESSAGES.success
+      );
+    } catch (error) {
+      return appUtils.errorResponse(res, error, constants.code.error_code);
+    }
+  }
+
+  async createOrders(req, res) {
+    try {
+      const pService = await service.createOrders(req);
+      return appUtils.successResponse(res, pService, constants.MESSAGES.success);
+    } catch (error) {
+      return appUtils.errorResponse(res, error, constants.code.error_code);
+    }
+  }
+
 }
 
 module.exports = { ProductsController };
