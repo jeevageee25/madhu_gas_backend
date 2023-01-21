@@ -40,6 +40,7 @@ const schemas = {
     phone: Joi.number().optional(),
     pincode: Joi.string().optional(),
     product: Joi.string().optional(),
+    user_name: Joi.string().optional(),
   }),
   updateOrders: Joi.object({
     _id: Joi.string().required(),
