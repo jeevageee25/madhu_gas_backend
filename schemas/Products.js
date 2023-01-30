@@ -8,6 +8,14 @@ const schemas = {
     page: Joi.number().optional(),
     perPage: Joi.number().optional(),
   }),
+  addExecutive: Joi.object({
+    first_name: Joi.string().required(),
+    last_name: Joi.string().required(),
+    password: Joi.string().required(),
+    phone: Joi.number().required(),
+    user_name: Joi.string().required(),
+    previledges: Joi.array().required(),
+  }),
   searchProducts: Joi.object().keys({
     search_key: Joi.object().required(),
     page: Joi.number().optional(),

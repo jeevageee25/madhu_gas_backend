@@ -28,6 +28,15 @@ class ProductsService {
     );
   }
 
+  async addExecutive(req) {
+    return await this.serviceUtil.add(
+      req.body,
+      constants.COLLECTIONS.EXECUTIVE,
+      constants.MESSAGES.success,
+      req
+    );
+  }
+
   async updateProducts(req) {
     return await this.serviceUtil.update(
       req.body,

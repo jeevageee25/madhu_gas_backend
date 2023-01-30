@@ -13,6 +13,10 @@ router.post('/executive/search', validator(schemas.searchExecutive, 'body'),
     controller.searchExecutive
 );
 
+router.post('/executive/add', validator(schemas.addExecutive, 'body'),
+    controller.addExecutive
+);
+
 // PRODUCTS 
 
 router.post('/products/search', validator(schemas.searchProducts, 'body'),

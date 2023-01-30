@@ -24,6 +24,19 @@ class ProductsController {
       return appUtils.errorResponse(res, error, constants.code.error_code);
     }
   }
+
+  async addExecutive(req, res) {
+    try {
+      const pService = await service.addExecutive(req);
+      return appUtils.successResponse(
+        res,
+        pService,
+        constants.MESSAGES.success
+      );
+    } catch (error) {
+      return appUtils.errorResponse(res, error, constants.code.error_code);
+    }
+  }
   
   async searchProducts(req, res) {
     try {
